@@ -1,0 +1,268 @@
+/* Load the default Redmine stylesheet */
+@import url(../../../stylesheets/application.css);
+
+:root {
+    /* Colors */
+    --font-color: #fff;
+    --font-color2: #aaa;
+    --link-color: #8cf;
+    --highlight-color: #ff8000;
+    --border-color: #446979;
+    --top-color: #313536;
+    --bottom-color: #1D2021;
+    --h1-color: #888;
+    --h2-color: #777;
+
+    /* Misc */
+    --padding: 10px;
+    --radius: 8px;
+    --border: 1px solid var(--top-color);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Layout */
+body {
+    background-color: var(--bottom-color) !important;
+    color: var(--font-color);
+    font-family: HelveticaNeue,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: inherit !important;
+}
+
+#main, #header {
+    background-color: var(--bottom-color) !important;
+}
+
+#header {
+    border-top: var(--border);
+    border-left: var(--border);
+    border-right: var(--border);
+    border-radius: var(--radius) var(--radius) 0px 0px;
+    min-height: inherit !important;
+}
+
+#headline h1 {
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+}
+
+#headline h2 {
+    display: inline-block;
+    margin: 0px;
+    padding-left: var(--padding);
+}
+
+#headline h2 .current-project {
+    font-size: 1.5em;
+}
+
+#wrapper {
+    width: 100%;
+}
+
+#wrapper2 {
+    background-color: var(--bottom-color) !important;
+}
+
+#wrapper3 {
+    background-color: var(--top-color) !important;
+}
+
+#content {
+    padding-top: var(--padding);
+    border-left: var(--border);
+    border-right: var(--border) !important;
+    background-color: var(--bottom-color) !important;
+}
+
+#top-menu {
+    background-color: var(--top-color);
+    width: 100%;
+    padding-bottom: 0px !important;
+}
+
+#top-menu, #header, #headline, #content, #sidebar, #footer {
+    width: 70% !important;
+    margin: 0px auto;
+    padding: var(--padding);
+}
+
+#main-menu {
+    font-size: 90%;
+    position: inherit;
+}
+
+#main-menu ul:first-child {
+    float: left;
+}
+
+#main-menu ul {
+    width: auto;
+}
+
+#main-menu li {
+    margin: 0px;
+}
+
+#main-menu li a {
+    font-weight: inherit !important;
+    padding: 0px 3px 0px 3px;
+}
+
+#main-menu a, #main-menu a.selected,
+#admin-menu a, #admin-menu a.selected {
+    text-decoration: none;
+    color: var(--link-color) !important;
+    background-color: inherit !important;
+}
+
+#main-menu a:hover, #main-menu a.selected,
+#admin-menu a:hover, #admin-menu a.selected {
+    text-decoration: none;
+    color: var(--highlight-color) !important;
+}
+
+#sidebar {
+    float: none;
+}
+
+#sidebar * {
+    display: inline-block;
+    float: none;
+}
+
+#footer {
+    background-color: var(--top-color);
+    border-left: var(--border);
+    border-right: var(--border);
+    border-bottom: var(--border);
+    border-top: none;
+    border-radius: 0px 0px var(--radius) var(--radius);
+    font-size: 70%;
+    color: var(--font-color2);
+}
+
+#footer a:link, #footer a:visited {
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+#footer a:hover {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+#login-form {
+    background-color: var(--bottom-color);
+    border: var(--border);
+    border-radius: var(--radius);
+}
+
+/* Text */
+a:link, a:visited {
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--highlight-color);
+}
+
+h1 {
+    color: var(--h1-color);
+}
+
+h2 {
+    color: var(--h2-color);
+}
+
+h2, h3, .wiki h1, .wiki h3 {
+    font-size: inherit !important;
+}
+
+h3.icon {
+    padding-left: 0px;
+}
+
+h4 {
+    border-bottom: var(--border);
+}
+
+h1, h2, h3, h4 {
+    font-family: inherit !important;
+}
+
+li {
+    display: block;
+}
+
+fieldset {
+    border: var(--border);
+}
+
+/* Redmine */
+#quick-search {
+    display: none;
+}
+
+.splitcontentright > .news {
+    margin-top: var(--padding);
+}
+
+.news > p {
+    padding-bottom: var(--padding);
+}
+
+.wiki {
+    padding-top: var(--padding);
+}
+
+.clearfix {
+    clear: both;
+}
+
+.icon, .icon.selected {
+    background-image: inherit !important;
+    padding-left: var(--padding) !important;
+}
+
+.box, .mypage-box {
+    background-color: var(--bottom-color);
+    color: var(--font-color);
+    border: var(--border);
+    border-radius: var(--radius);
+}
+
+.block-receiver {
+    border: none;
+}
+
+div.wiki table, table.list {
+    border: none !important;
+}
+
+table.progress td.done {
+    background-color: var(--top-color) !important;
+}
+
+table.progress td.closed {
+    background-color: var(--highlight-color) !important;
+}
+
+table.list tr, table.list th, table.list td {
+    background-color: inherit !important;
+}
+
+table.list td, div.wiki table td {
+    border: var(--border);
+}
+
+input {
+    background-color: var(--bottom-color) !important;
+    color: var(--font-color2) !important;
+    border: var(--border) !important;
+}
