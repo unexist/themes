@@ -194,6 +194,7 @@ h4 {
 
 h1, h2, h3, h4 {
     font-family: inherit !important;
+    margin: 5px 0px;
 }
 
 li {
@@ -202,6 +203,7 @@ li {
 
 fieldset {
     border: var(--border);
+    margin: 5px 0px;
 }
 
 /* Redmine */
@@ -241,8 +243,30 @@ fieldset {
     border: none;
 }
 
+div.wiki p {
+    text-align: justify;
+}
+
 div.wiki table, table.list {
     border: none !important;
+}
+
+div.wiki pre {
+    background-color: var(--bottom-color);
+    border: var(--border);
+}
+
+div.wiki ul.toc {
+    background-color: var(--bottom-color);
+    border: var(--border);
+}
+
+div.wiki ul.toc a {
+    font-size: 1em;
+}
+
+div.wiki ul.toc a:hover {
+    color: var(--highlight-color) !important;
 }
 
 table.progress td.done {
@@ -259,6 +283,10 @@ table.list tr, table.list th, table.list td {
 
 table.list td, div.wiki table td {
     border: var(--border);
+}
+
+table.column td {
+    border: none !important;
 }
 
 input {
