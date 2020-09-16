@@ -59,10 +59,26 @@ footer a:hover {
     width: 100%;
 }
 
-#content {
+#split {
+    display: table;
     padding-top: var(--padding);
     border-left: var(--border);
     border-right: var(--border);
+}
+
+#content {
+    display: table-cell;
+    padding-right: var(--padding);
+}
+
+#sidebar {
+    display: table-cell;
+    width: 150px;
+    padding-left: var(--padding);
+}
+
+#sidebar a {
+    display: block;
 }
 
 #header {
@@ -70,7 +86,7 @@ footer a:hover {
     width: 100%;
 }
 
-#headline, #content, nav, footer {
+#headline, #split, nav, footer {
     width: 70%;
     margin: 0px auto;
     padding: var(--padding);
@@ -129,7 +145,12 @@ li {
 }
 
 .post-content p {
-    margin: 10px 0px;
+    margin: 20px 0px;
+}
+
+.post-content pre.highlight code {
+    padding: 10px;
+    color: var(--font-color2) !important;
 }
 
 .post-tags {
