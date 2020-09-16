@@ -289,7 +289,7 @@ table.column td {
     border: none !important;
 }
 
-input {
+input, textarea {
     background-color: var(--bottom-color) !important;
     color: var(--font-color2) !important;
     border: var(--border) !important;
