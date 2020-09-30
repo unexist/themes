@@ -7,7 +7,7 @@
     --font-color2: #aaa;
     --link-color: #8cf;
     --highlight-color: #ff8000;
-    --border-color: #446979;
+    --light-border-color: #446979;
     --top-color: #313536;
     --bottom-color: #1D2021;
     --h1-color: #888;
@@ -16,7 +16,8 @@
     /* Misc */
     --padding: 10px;
     --radius: 8px;
-    --border: 1px solid var(--top-color);
+    --light-border: 1px solid var(--top-color);
+    --dark-border: 1px solid var(--bottom-color);
 }
 
 * {
@@ -36,12 +37,24 @@ body {
     background-color: var(--bottom-color) !important;
 }
 
+@media screen and (max-width: 899px) {
+    #main {
+        padding-top: 0px !important;
+    }
+}
+
 #header {
-    border-top: var(--border);
-    border-left: var(--border);
-    border-right: var(--border);
+    border-top: var(--light-border);
+    border-left: var(--light-border);
+    border-right: var(--light-border);
     border-radius: var(--radius) var(--radius) 0px 0px;
     min-height: inherit !important;
+}
+
+@media screen and (max-width: 899px) {
+    #header {
+        display: none !important;
+    }
 }
 
 #headline h1 {
@@ -60,6 +73,23 @@ body {
     font-size: 1.5em;
 }
 
+@media screen and (max-width: 899px) {
+    #headline {
+        height: 80px !important;
+        position: relative;
+    }
+
+    #headline .mobile-toggle-button {
+        float: none !important;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        height: 80px;
+        line-height: 80px;
+        border-left: var(--dark-border);
+    }
+}
+
 #wrapper {
     width: 100%;
 }
@@ -74,9 +104,15 @@ body {
 
 #content {
     padding-top: var(--padding);
-    border-left: var(--border);
-    border-right: var(--border) !important;
+    border-left: var(--light-border);
+    border-right: var(--light-border) !important;
     background-color: var(--bottom-color) !important;
+}
+
+@media screen and (max-width: 899px) {
+    #content {
+        border: none !important;
+    }
 }
 
 #top-menu {
@@ -91,9 +127,16 @@ body {
     padding: var(--padding);
 }
 
+@media screen and (max-width: 899px) {
+    #top-menu, #header, #headline, #content, #sidebar, #footer {
+        width: 100% !important;
+    }
+}
+
 #main-menu {
     font-size: 90%;
     position: inherit;
+    left: 0px;
 }
 
 #main-menu ul:first-child {
@@ -137,9 +180,9 @@ body {
 
 #footer {
     background-color: var(--top-color);
-    border-left: var(--border);
-    border-right: var(--border);
-    border-bottom: var(--border);
+    border-left: var(--light-border);
+    border-right: var(--light-border);
+    border-bottom: var(--light-border);
     border-top: none;
     border-radius: 0px 0px var(--radius) var(--radius);
     font-size: 70%;
@@ -158,7 +201,7 @@ body {
 
 #login-form {
     background-color: var(--bottom-color);
-    border: var(--border);
+    border: var(--light-border);
     border-radius: var(--radius);
 }
 
@@ -189,7 +232,7 @@ h3.icon {
 }
 
 h4 {
-    border-bottom: var(--border);
+    border-bottom: var(--light-border);
 }
 
 h1, h2, h3, h4 {
@@ -202,13 +245,33 @@ li {
 }
 
 fieldset {
-    border: var(--border);
+    border: var(--light-border);
     margin: 5px 0px;
 }
 
 /* Redmine */
 #quick-search {
     display: none;
+}
+
+.flyout-menu {
+    background-color: var(--top-color) !important;
+}
+
+.flyout-menu h3 {
+    background-color: inherit !important;
+    border: none !important;
+}
+
+.flyout-menu .flyout-menu__avatar {
+    margin: 10px 0px !important;
+}
+
+@media screen and (max-width: 899px) {
+    .flyout-menu .flyout-menu__search {
+        height: 80px;
+        background-color: var(--bottom-color);
+    }
 }
 
 .splitcontentright > .news {
@@ -235,7 +298,7 @@ fieldset {
 .box, .mypage-box {
     background-color: var(--bottom-color);
     color: var(--font-color);
-    border: var(--border);
+    border: var(--light-border);
     border-radius: var(--radius);
 }
 
@@ -253,12 +316,12 @@ div.wiki table, table.list {
 
 div.wiki pre {
     background-color: var(--bottom-color);
-    border: var(--border);
+    border: var(--light-border);
 }
 
 div.wiki ul.toc {
     background-color: var(--bottom-color);
-    border: var(--border);
+    border: var(--light-border);
 }
 
 div.wiki ul.toc a {
@@ -282,7 +345,7 @@ table.list tr, table.list th, table.list td {
 }
 
 table.list td, div.wiki table td {
-    border: var(--border);
+    border: var(--light-border);
 }
 
 table.column td {
@@ -292,5 +355,5 @@ table.column td {
 input, textarea {
     background-color: var(--bottom-color) !important;
     color: var(--font-color2) !important;
-    border: var(--border) !important;
+    border: var(--light-border) !important;
 }
