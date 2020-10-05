@@ -1,0 +1,41 @@
+{header}
+    <title>Mercurial repositories index</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div class="headline">
+            <h1>unexist.dev</h1>
+            <h2 class="breadcrumb">
+               <a href="/">Mercurial</a> {pathdef%breadcrumb}
+            </h2>
+        </div>
+
+        <div class="menu">
+            <a href="https://hg.unexist.dev">Home</a>
+            <a href="https://blog.unexist.dev">Blog</a>
+            <a href="https://unexist.dev">Projects</a>
+        </div>
+    </div>
+
+    <div class="main">
+        <table class="bigtable">
+            <thead>
+                <tr>
+                    <th><a href="?sort={sort_name}">Name</a></th>
+                    <th><a href="?sort={sort_description}">Description</a></th>
+                    <th><a href="?sort={sort_contact}">Contact</a></th>
+                    <th><a href="?sort={sort_lastchange}">Last modified</a></th>
+                    <th>&nbsp;</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody class="stripes2">
+                {entries%indexentry}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{footer}

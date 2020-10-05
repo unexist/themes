@@ -1,0 +1,41 @@
+{header}
+<title>Help: {topic}</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div class="headline">
+            <h1>unexist.dev</h1>
+            <h2 class="breadcrumb">
+                <a href="/">Mercurial</a> {pathdef%breadcrumb}
+            </h2>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="https://hg.unexist.dev">Home</a></li>
+                <li><a href="https://blog.unexist.dev">Blog</a></li>
+                <li><a href="https://unexist.dev">Projects</a></li>
+            </ul>
+            <ul>
+                <li><a href="{url|urlescape}shortlog{sessionvars%urlparameter}">log</a></li>
+                <li><a href="{url|urlescape}graph{sessionvars%urlparameter}">graph</a></li>
+                <li><a href="{url|urlescape}tags{sessionvars%urlparameter}">tags</a></li>
+                <li><a href="{url|urlescape}bookmarks{sessionvars%urlparameter}">bookmarks</a></li>
+                <li><a href="{url|urlescape}branches{sessionvars%urlparameter}">branches</a></li>
+            </ul>
+            <ul>
+                <li class="active"><a href="{url|urlescape}help{sessionvars%urlparameter}">help</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main">
+        <div id="doc">
+            {rstdoc(doc, "html")}
+        </div>
+    </div>
+</div>
+
+{footer}

@@ -1,0 +1,56 @@
+{header}
+<title>{repo|escape}: bookmarks</title>
+    <link rel="alternate" type="application/atom+xml" href="{url|urlescape}atom-bookmarks" title="Atom feed for {repo|escape}: bookmarks" />
+    <link rel="alternate" type="application/rss+xml" href="{url|urlescape}rss-bookmarks" title="RSS feed for {repo|escape}: bookmarks" />
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div class="headline">
+            <h1>unexist.dev</h1>
+            <h2 class="breadcrumb">
+                <a href="/">Mercurial</a> {pathdef%breadcrumb}
+            </h2>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="https://hg.unexist.dev">Home</a></li>
+                <li><a href="https://blog.unexist.dev">Blog</a></li>
+                <li><a href="https://unexist.dev">Projects</a></li>
+            </ul>
+            <ul>
+                <li><a href="{url|urlescape}shortlog{sessionvars%urlparameter}">log</a></li>
+                <li><a href="{url|urlescape}graph{sessionvars%urlparameter}">graph</a></li>
+                <li><a href="{url|urlescape}tags{sessionvars%urlparameter}">tags</a></li>
+                <li class="active">bookmarks</li>
+                <li><a href="{url|urlescape}branches{sessionvars%urlparameter}">branches</a></li>
+            </ul>
+            <ul>
+                <li><a href="{url|urlescape}help{sessionvars%urlparameter}">help</a></li>
+            </ul>
+            <div class="atom-logo">
+                <a href="{url|urlescape}atom-bookmarks" title="subscribe to atom feed">
+                    <img class="atom-logo" src="{staticurl|urlescape}feed-icon-14x14.png" alt="atom feed" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <table class="bigtable">
+            <thead>
+                <tr>
+                     <th>bookmark</th>
+                     <th>node</th>
+                </tr>
+            </thead>
+            <tbody class="stripes2">
+                {entries%bookmarkentry}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{footer}
