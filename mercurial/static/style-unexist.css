@@ -306,7 +306,7 @@ td.annotate:hover div.annotate-info { display: inline; }
   font-size: 90%;
   position: relative;
   counter-reset: lineno;
-  background-color: #fff;
+  background-color: inherit;
 }
 
 .wrap > span {
