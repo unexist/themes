@@ -11,7 +11,10 @@
 
 <div class="headline">
     <h1>unexist.dev</h1>
-    <h2 class="breadcrumb"><a href="/">Mercurial</a> {pathdef%breadcrumb}</h2>
+    <h2 class="breadcrumb">
+        {pathdef%breadcrumb}
+    </h2>
+    <p>Mercurial main repository</p>
     <h3>
      log {file|escape} @ {rev}:<a href="{url|urlescape}rev/{node|short}{sessionvars%urlparameter}">{node|short}</a>
      {alltags}
@@ -19,8 +22,6 @@
     ' (following lines {linerange}{if(descend, ', descending')} <a href="{url|urlescape}log/{symrev}/{file|urlescape}{sessionvars%urlparameter}">all revisions for this file</a>)')}
     </h3>
 </div>
-
-
 
 
 <div class="main">

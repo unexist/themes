@@ -244,7 +244,6 @@ indexentry = '
   <tr>
     <td><a href="{url|urlescape}{sessionvars%urlparameter}">{name|escape}</a></td>
     <td>{description}</td>
-    <td>{contact|obfuscate}</td>
     <td class="age">{lastchange|rfc822date}</td>
     <td class="indexlinks">{archives%indexarchiveentry}</td>
     <td>
@@ -257,15 +256,12 @@ indexentry = '
   </tr>\n'
 indexarchiveentry = '<a href="{url|urlescape}archive/{node|short}{extension|urlescape}">&nbsp;&darr;{type|escape}</a>'
 index = index.tmpl
-archiveentry = '
-  <li>
-    <a href="{url|urlescape}archive/{symrev}{extension|urlescape}{ifeq(path,'/','',path|urlescape)}">{type|escape}</a>
-  </li>'
+archiveentry = '<a href="{url|urlescape}archive/{symrev}{extension|urlescape}{ifeq(path,'/','',path|urlescape)}">{type|escape}</a>'
 notfound = notfound.tmpl
 error = error.tmpl
 urlparameter = '{separator}{name}={value|urlescape}'
 hiddenformentry = '<input type="hidden" name="{name}" value="{value|escape}" />'
-breadcrumb = '&gt; <a href="{url|urlescape}">{name|escape}</a> '
+breadcrumb = '<a href="{url|urlescape}">{name|escape}</a> '
 
 searchform = '
   <form class="search" action="{url|urlescape}log">
