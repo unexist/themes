@@ -52,7 +52,7 @@ a:hover {
 }
 
 .headline {
-    padding: var(--padding-top-bot) var(--padding) !important;
+    padding: var(--padding-top-bot) var(--padding) 0px var(--padding) !important;¬
 }
 
 .headline > div {
@@ -615,6 +615,10 @@ svg.linkedin #path14 {
 
 svg.linkedin #path28, svg.linkedin #path30 {
     fill: var(--bottom-color)
+}
+
+svg.waves {
+    vertical-align: bottom;
 }
 
 /* Responsiveness */
