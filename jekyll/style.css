@@ -31,6 +31,13 @@
     --admon-tip: var(--h4-color);
     --admon-caution: var(--highlight-color);
     --admon-warning: var(--highlight-color);
+
+    /* Waves */
+    --scrollbar-size: 20px;
+    --mask: radial-gradient(26.83px at 50% 36.00px, #000 99%, #0000 101%) calc(50% - 24px) 0 / 48px 51% repeat-x,
+        radial-gradient(26.83px at 50% -24px, #0000 99%, #000 101%) 50% 12px / 48px calc(51% - 12px) repeat-x,
+        radial-gradient(26.83px at 50% calc(100% - 36.00px), #000 99%, #0000 101%) 50% calc(100% + var(--scrollbar-size)) / 48px 51% repeat-x,
+        radial-gradient(26.83px at 50% calc(100% + 24.00px), #0000 99%, #000 101%) calc(50% - 24px) calc(100% - 12px) / 48px calc(51% - 12px) repeat-x;
 }
 
 * {
@@ -163,8 +170,8 @@ span.bold {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+    border: var(--border);
 }
-
 
 #content img.portrait {
     max-height: 300px;
@@ -176,6 +183,25 @@ span.bold {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+}
+
+#content .sidebarblock {
+    background-color: var(--top-color);
+    padding: var(--padding);
+}
+
+#content .sidebarblock .title:before {
+    content: "##";
+    padding-right: 0.2em;
+}
+
+#content .sidebarblock .title {
+    text-align: right;
+    text-decoration: none;
+    color: var(--h2-color);
+    border-bottom: 1px solid var(--h2-color);
+    margin-bottom: 10px;
+    font-size: 1.5em;
 }
 
 #content table {
@@ -241,6 +267,13 @@ span.bold {
     padding-right: 0.2em;
 }
 
+/* Footnotes */
+#footnotes hr {
+    border-bottom: 0px;
+    border-top: 1px solid var(--link-color);
+    margin-bottom: var(--margin);
+}
+
 /* Sidebar */
 #sidebar {
     flex-grow: 0;
@@ -263,7 +296,7 @@ span.bold {
 }
 
 #headline {
-    padding: var(--padding-top-bot) var(--padding) !important;
+    padding: var(--padding-top-bot) var(--padding) 0px var(--padding) !important;
 }
 
 #headline h1 {
@@ -378,6 +411,10 @@ svg.linkedin #path28, svg.linkedin #path30 {
     fill: var(--bottom-color)
 }
 
+svg.waves {
+    vertical-align: bottom;
+}
+
 /* Jekyll */
 .post-list li {
     padding-top: var(--padding);
@@ -467,10 +504,12 @@ svg.linkedin #path28, svg.linkedin #path30 {
 .post-content pre {
     display: grid;
     text-align: left;
-    padding: var(--padding);
+    padding: var(--padding-top-bot) var(--padding);
     border: var(--border);
     background-color: #000;
     overflow-x: auto;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
 }
 
 .post-content pre.highlight code {
@@ -483,7 +522,7 @@ svg.linkedin #path28, svg.linkedin #path30 {
     display: inline-block;
     line-height: 1;
     border: var(--border);
-    box-shadow: 0 1px 1px rgba(0,0,0,0.2), 0 2px 0 0 rgba(255,255,255,0.7) inset;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2) inset, 0 1px 0 0 rgba(255, 255, 255, 0.7) inset, 0 1px 0 rgba(0, 0, 0, 0.85);
     padding: 2px 5px;
     white-space: nowrap;
 }
